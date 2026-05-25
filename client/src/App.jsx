@@ -1,25 +1,36 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import React, { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import Services from './pages/Services'
+import Pricing from './pages/Pricing'
+import Contact from './pages/Contact'
 
-function Home() {
-  return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Welcome Home</h1>
-      <p>This paragraph uses DM Sans by default.</p>
-      {/* Example using a Tabler Icon via webfont class */}
-      <i className="ti ti-mail" style={{ fontSize: '24px', color: 'var(--accent-color)' }}></i>
-    </div>
-  );
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
 }
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
-      <nav style={{ padding: '1rem', gap: '10px', display: 'flex' }}>
-        <Link to="/">Home</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <ScrollToTop />
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
     </BrowserRouter>
-  );
+  )
 }
+
+export default App

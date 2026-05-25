@@ -7,36 +7,18 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependency directories
-# (This covers the root, client, and server folders all at once)
-node_modules/
-dist/
-dist-ssr/
+node_modules
+dist
+dist-ssr
 *.local
-
-# Firebase cache
-.firebase/
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea/
+.idea
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-
-# Environment / Secret variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Vite / React build outputs
-client/dist/
-
-# Testing
-/coverage

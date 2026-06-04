@@ -4,12 +4,6 @@ A full-stack business website for a health, wellness & beauty clinic built with 
 
 ---
 
-## 🖥️ Live Preview
-
-> _Add your deployment URL here (e.g. Vercel, Netlify, Railway)_
-
----
-
 ## ✨ Features
 
 - 5 fully responsive pages — Home, About, Services, Pricing, Contact
@@ -105,8 +99,6 @@ SMTP_USER=your_smtp_user
 SMTP_PASS=your_smtp_password
 CONTACT_EMAIL=hello@yourdomain.com
 ```
-
-> 💡 For development, use [Mailtrap](https://mailtrap.io) — it's free and captures emails without sending them.
 
 ---
 
